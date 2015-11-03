@@ -1,0 +1,248 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Minutes"
+            android:id="@+id/ID_MINUTES"
+            android:textSize="90sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Separator"
+            android:id="@+id/ID_SEP"
+            android:textSize="90sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Seconds"
+            android:id="@+id/ID_SECONDS"
+            android:textSize="90sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal"
+        android:max="100000"
+        android:progress="0"
+        android:indeterminate="false" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:text="@string/STOP"
+            android:id="@+id/ID_STOP_BUTTON"
+            android:layout_weight="1"
+            android:onClick="StopButton"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:text="@string/FIGHT"
+            android:id="@+id/ID_FIGHT_BUTTON"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:onClick="FightButton"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:text="@string/RESET"
+            android:id="@+id/ID_RESET_BUTTON"
+            android:layout_weight="1"
+            android:onClick="ResetButton"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/ROUND_DURATION"
+        android:id="@+id/ID_ROUND_DURATION"
+        android:layout_gravity="center_horizontal|top" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_MINUP"
+                android:src="@drawable/up"
+                android:layout_gravity="center_horizontal"
+                android:onClick="MinUpButton"/>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_Minutes_EditText"
+                android:layout_gravity="center_horizontal"
+                android:inputType="numberDecimal"
+                android:textSize="25sp" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_MINDOWN"
+                android:src="@drawable/down"
+                android:layout_gravity="center_horizontal"
+                android:onClick="MinDownButton"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/Min"
+                android:id="@+id/ID_MIN"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_SECUP"
+                android:src="@drawable/up"
+                android:layout_gravity="left"
+                android:onClick="SecUpButton"/>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_Seconds_EditText"
+                android:layout_gravity="left"
+                android:inputType="numberDecimal"
+                android:textSize="25sp" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_SECDOWN"
+                android:src="@drawable/down"
+                android:layout_gravity="left"
+                android:onClick="SecDownButton"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/Sec"
+                android:id="@+id/ID_SEC"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <!-- Round duration picker -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_ROUNDUP"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/up"
+                android:layout_weight="1"
+                android:onClick="RoundUpButton"/>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_RoundDuration_EditText"
+                android:layout_gravity="center_horizontal"
+                android:inputType="numberDecimal"
+                android:textSize="25sp" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/ID_ROUNDDOWN"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/down"
+                android:layout_weight="1"
+                android:onClick="RoundDownButton"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/Rest"
+                android:id="@+id/ID_REST"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/ID_RoundCount_SetTextView"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/None"
+        android:textSize="80sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/TotalRounds"
+        android:id="@+id/ID_TOTAL_ROUNDS"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="@string/RESET"
+        android:id="@+id/ID_RESET_ROUNDS"
+        android:layout_gravity="center_horizontal"
+        android:onClick="ResetRounds"/>
+
+</LinearLayout>

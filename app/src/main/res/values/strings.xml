@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BoxingTimer</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="ROUND_DURATION">ROUND DURATION</string>
+    <string name="REST_DURATION">REST DURATION</string>
+
+
+    <!-- Controls -->
+    <string name="FIGHT">FIGHT</string>
+    <string name="STOP">STOP</string>
+    <string name="RESET">RESET</string>
+
+
+    <string name="TotalRounds">TOTAL ROUNDS</string>
+    <string name="None">0</string>
+
+    <!-- Rest duration radio buttons -->
+    <string name="_30">30sec</string>
+    <string name="_45">45sec</string>
+    <string name="_60">60sec</string>
+
+    <!-- CountDownTimer stuff -->
+    <string name="Minutes">00</string>
+    <string name="Separator">:</string>
+    <string name="Seconds">00</string>
+
+    <string name="MinutesDown">MinD</string>
+    <string name="MinutesUp">MinU</string>
+
+    <string name="SecondsDown">SecD</string>
+    <string name="SecondsUp">SecU</string>
+
+    <string name="Min">Min</string>
+    <string name="Sec">Sec</string>
+    <string name="Rest">Rest</string>
+
+
+</resources>

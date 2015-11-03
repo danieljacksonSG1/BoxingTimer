@@ -1,0 +1,63 @@
+#Boxing timer Algo
+
+// Button Objects
+FightButton
+StopButton
+ResetButton
+
+// Initial button states
+isFightPressed		= false
+isStopPressed		= false
+isResetPressed		= false
+isCountDownRunning = false
+isRestTimerRunning = false
+
+
+fightbutton()
+{
+	if (isFightPressed == true)
+	{
+		// don't start the timer
+	}
+	else if (isFightPressed == false)
+	{
+		OK we're not pressed
+		StartCountDown();
+	}
+}
+
+Stopbutton()
+{
+	if (isStopPressed == false && isFightPressed == true)
+	{
+		Stop Countdown timers
+		isStoppressed = false;
+	}
+	else if (isStopPressed == true)
+	{
+		// Do nothing
+	}
+	
+}
+
+ResetButton()
+{
+
+}
+
+StartCountDown()
+{
+	isCountDownRunning = true
+	
+
+	ontick()
+	{
+		// do stuff
+	}
+	onFinish()
+	{
+		// Reset the button state - so we can press it again if need be
+		isFightPressed = false 
+		
+	}
+}
